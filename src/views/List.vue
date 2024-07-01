@@ -25,7 +25,7 @@
             </li>
         </ul>
 
-        <div class="border-gray-700 absolute bg-white rounded-lg top-1/2 left-1/2 w-1/3 h-1/2 -translate-x-1/2 -translate-y-1/2 p-6 border border-solid flex flex-col" v-if="showFlag">
+        <!-- <div class="border-gray-700 absolute bg-white rounded-lg top-1/2 left-1/2 w-1/3 h-1/2 -translate-x-1/2 -translate-y-1/2 p-6 border border-solid flex flex-col" v-if="showFlag">
             <div class="text-center text-2xl">{{ isEdit ? '编辑同学' : '新增同学' }}</div>
             <div class="grow shrink flex flex-col justify-center">
                 <div class="flex h-20 text-2xl items-center">
@@ -45,7 +45,31 @@
                 <button class="mr-3 bg-white border border-solid border-blue-500 text-blue-500 w-20 h-10" @click="cancelFn">取消</button>
                 <button class="text-white bg-blue-500 w-20 h-10" @click="submitFn">确定</button>
             </div>
-        </div>
+        </div> -->
+        <a-modal  
+        v-model:open="showFlag"    
+        :width="600"  
+        @cancel="cancelFn"  
+        @ok="submitFn"
+        okText="确定"
+        cancelText="取消"  
+        >  
+        <div class="text-center text-2xl">{{ isEdit ? '编辑同学' : '新增同学' }}</div>
+            <div class="grow shrink flex flex-col justify-center">
+                <div class="flex h-20 text-2xl items-center">
+                    <span class="mr-3 text-xl">学号</span>
+                    <input class="grow shrink h-9 text-xl border border-solid border-black" type="text" v-model="studyNum" />
+                </div>
+                <div class="flex h-20 text-2xl items-center">
+                    <span class="mr-3 text-xl">姓名</span>
+                    <input class="grow shrink h-9 text-xl border border-solid border-black" type="text" v-model="name" />
+                </div>
+                <div class="flex h-20 text-2xl items-center">
+                    <span class="mr-3 text-xl">年龄</span>
+                    <input class="grow shrink h-9 text-xl border border-solid border-black" type="text" v-model="year" />
+                </div>
+            </div> 
+  </a-modal> 
     </div>
 </template>
 
