@@ -4,19 +4,24 @@ import { reactive } from 'vue';
 export const useUserStore = defineStore('user', () => {
     let userList = reactive([
         {
-            id: 220812022,
+            num: 220812022,
             userName: '刘淑文',
-            age: 18,
+            age: 20,
         },
         {
-            id: 220812008,
+            num: 220812008,
             userName: '蔡欣怡',
-            age: 18,
+            age: 21,
         },
         {
-            id: 220812030,
+            num: 220812030,
             userName: '龙依',
             age: 18,
+        },
+        {
+            num: 220812031,
+            userName: '张三',
+            age: 17,
         },
     ]);
 

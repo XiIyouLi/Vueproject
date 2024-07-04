@@ -15,7 +15,7 @@
 
 <template>
     <div class="h-16 w-full flex items-center justify-center border-b border-solid border-gray-700">
-        <div class="inline-block mr-20 text-2xl" :class="{ active: type === item }" v-for="(item, index) in ['Welcome', 'List']" :key="`nav_${index}`" @click="type = item">
+        <div class="inline-block mr-20 text-2xl" :class="{ active: type === item }" v-for="(item, index) in ['Welcome', 'List','3d']" :key="`nav_${index}`" @click="type = item">
             <RouterLink :to="`/${item}`">{{ item }}</RouterLink>
         </div>
     </div>

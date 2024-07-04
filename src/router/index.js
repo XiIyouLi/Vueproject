@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from 'vue-router';
 
 import Welcome from '@/views/Welcome.vue';
 import List from '@/views/List.vue';
+import Liti from '../views/Liti.vue';
 
 const routes = [
     {
@@ -17,6 +18,11 @@ const routes = [
         path: '/List',
         name: 'List',
         component: List,
+    },
+    {
+        path: '/3d',
+        name: '3d',
+        component: Liti,
     },
 ];
 
